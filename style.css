@@ -57,7 +57,7 @@ nav a:hover {
 /* Hero */
 
 .hero {
-   min-height: calc(100vh - 78px);
+    min-height: calc(100vh - 78px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,8 +65,8 @@ nav a:hover {
 
     background:
         linear-gradient(
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.35)
+            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.30)
         ),
         url("hero.jpg");
 
@@ -75,8 +75,19 @@ nav a:hover {
     background-repeat: no-repeat;
 
     color: white;
+
+    animation: heroZoom 12s ease-in-out infinite alternate;
 }
 
+@keyframes heroZoom {
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 106%;
+    }
+}
 
 .hero-content {
     max-width: 900px;
